@@ -18,6 +18,27 @@ document.getElementById("numeriCasuali").textContent = numeriCasuali.join(", ");
 
 
 
+// timer di 30 secondi
+let tempo = 30; /* sono secondi */
+let timer = setInterval(() => {
+    document.getElementById("timer").textContent = --tempo;
+    if (tempo === 0) {
+        clearInterval(timer);
+        document.getElementById("numeriCasuali").textContent = "";
+        chiediNumeriUtente();
+    }
+}, 1000); /* millisecondi */
+
+
+
+
+
+
+
+// todo rimuovere i numeri che sono stati generati
+
+
+
 //# Sezione Funzioni --------------------------------------------------------------------
 // Chiediamo all'utente di inserire i numeri dopo che sono scomparsi
 function chiediNumeriUtente() {
