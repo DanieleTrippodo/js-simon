@@ -2,7 +2,18 @@
 let numeriCasuali = [];
 while (numeriCasuali.length < 5) {
     let numero = Math.floor(Math.random() * 100) + 1;
+
+    // per verificare che non ci siano numeri doppioni
+    if (!numeriCasuali.includes(numero)) {
+        numeriCasuali.push(numero);
+    }
 }
+
+
+
+// aggiungere i numericasuali nel DOM
+document.getElementById("numeriCasuali").textContent = numeriCasuali.join(", ");
+
 
 
 
